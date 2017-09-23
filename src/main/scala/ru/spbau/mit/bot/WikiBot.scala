@@ -135,7 +135,7 @@ class WikiBot(val token: String,
     }
 
     // update page version
-    // database ! AddPage(page.title, page.version)
+    database ! AddPage(page.title, page.version)
   }
 
   /** Traverse tree and updates information about all pages.
@@ -204,8 +204,6 @@ class WikiBot(val token: String,
   private def addLastNode(id: Long, name: String): Unit = nodes.getOrElseUpdate(id, ArrayBuffer.empty) += name
 
   private def findNode(id: Long): Option[TreeNode] = {
-    println(nodes.getOrElse(id, ArrayBuffer(ROOT)))
-
     var node: Option[TreeNode] = Some(root.get())
 
     for (name <- nodes.getOrElse(id, ArrayBuffer(ROOT))) {
