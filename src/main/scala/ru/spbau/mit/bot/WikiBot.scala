@@ -9,7 +9,6 @@ import info.mukel.telegrambot4s.api.declarative.{Callbacks, Commands}
 import info.mukel.telegrambot4s.api.{Polling, TelegramBot}
 import info.mukel.telegrambot4s.methods.{AnswerCallbackQuery, EditMessageReplyMarkup, ParseMode, SendMessage}
 import info.mukel.telegrambot4s.models._
-import ru.spbau.jvm.scala.lecture03.parser.messages.{AddWord => AddWordMessage}
 import ru.spbau.mit.database.WikiActor._
 import ru.spbau.mit.wiki._
 
